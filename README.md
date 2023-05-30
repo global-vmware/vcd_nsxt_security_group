@@ -40,7 +40,7 @@ This Terraform module allows you to create Static Groups (a.k.a. Security Groups
 ## Example Usage
 
 ```terraform
-module "vcd_security_group" {
+module "vcd_nsxt_security_group" {
   source              = "github.com/global-vmware/vcd_nsxt_security_group.git?ref=v1.1.0"
 
   vdc_org_name          = "<US1-VDC-ORG-NAME>"
