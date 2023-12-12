@@ -1,6 +1,6 @@
 # VCD Security Group Terraform Module
 
-This Terraform module allows you to create Static Groups (a.k.a. Security Groups) in an existing VMware Cloud Director (VCD) Environment. Static Groups are groups of Data Center Group Orgnization Networks to which Distributed Firewall (DFW) rules apply.  This module can be used to provision new Security Groups into [Rackspace Technology SDDC Flex](https://www.rackspace.com/cloud/private/software-defined-data-center-flex) VCD Data Center Regions.
+This Terraform module allows you to create Static Groups (a.k.a. Security Groups) in an existing VMware Cloud Director (VCD) Environment. Static Groups are groups of Data Center Group Organization Networks to which Distributed Firewall (DFW) rules apply.  This module can be used to provision new Security Groups into [Rackspace Technology SDDC Flex](https://www.rackspace.com/cloud/private/software-defined-data-center-flex) VCD Data Center Regions.
 
 ## Requirements
 
