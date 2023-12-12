@@ -10,7 +10,8 @@ terraform {
 }
 
 data "vcd_vdc_group" "vdc_group" {
-  name = var.vdc_group_name
+  org             = var.vdc_org_name
+  name            = var.vdc_group_name
 }
 
 data "vcd_nsxt_edgegateway" "edge_gateway" {
@@ -21,7 +22,6 @@ data "vcd_nsxt_edgegateway" "edge_gateway" {
 
 data "vcd_network_routed_v2" "org_vdc_routed_network" {
   for_each        = { for net in var.org_network_names : net.name => net }
-
   org             = var.vdc_org_name
   edge_gateway_id = data.vcd_nsxt_edgegateway.edge_gateway.id
   name            = each.value.name
@@ -30,7 +30,6 @@ data "vcd_network_routed_v2" "org_vdc_routed_network" {
 
 resource "vcd_nsxt_security_group" "security_group" {
   for_each        = var.security_groups
-
   org             = var.vdc_org_name
   edge_gateway_id = data.vcd_nsxt_edgegateway.edge_gateway.id
   name            = each.key
